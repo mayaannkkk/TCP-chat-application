@@ -30,7 +30,10 @@ int main(int argc, char *argv[]){
     }
     server=gethostbyname(argv[1]);
 
-    if(server==NULL)
+    if(server==NULL){
+        fprintf(stderr, "Error, no such host\n");
+        exit(1);
+    }
     fprintf(stderr,"Error, no host");
 
     bzero((char *)&serv_addr,sizeof(serv_addr));
