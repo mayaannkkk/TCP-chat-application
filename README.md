@@ -49,8 +49,19 @@ It's a lightweight, console-based application — no GUI, just the good old term
 
 Make sure you're on a Linux machine with GCC installed.
 
-### 1. Compile the Code
+### 1. Compile and Run the Code
 
 ```bash
+# Compile the server and client
 gcc server.c -o server
 gcc client.c -o client
+
+# Run server on any port you choose
+./server <port_number>
+
+# Run client by connecting to the server's IP and the same port
+./client <server_ip_address> <port_number>
+
+
+
+
